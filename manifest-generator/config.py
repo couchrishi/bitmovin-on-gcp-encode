@@ -32,9 +32,6 @@ OUTPUT_BASE_PATH = ""
 # ASSET DETAILS
 #ASSET_NAME="high+(1).mp4"
 
-#WEBHOOK DETAILS FOR UPDATING CMS, MODIFYING PATHS etc.
-WEBHOOK_ERROR_URL = "http:/www.bitmovin.com"
-WEBHOOK_SUCCESS_URL = "<HTTP ENDPOINT URL OF THE MANIFEST GENERATOR CLOUD FUNCTIONS>"
 # Override with local config settings
 try:
     from config_local import *
