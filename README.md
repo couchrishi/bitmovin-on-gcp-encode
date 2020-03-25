@@ -46,7 +46,7 @@ This repository contains python code that will help you encode your source video
                 GCE_ACCOUNT_ID 
                 CLOUD_REGION
     3. Zip all the files under this folder and upload it to Google Cloud Functions and deploy the scripts.
-       You need to choose Python 3.7 as the runtime environment
+       You need to choose Python 3.7 as the runtime environment and set HTTP endpoint as the trigger
     4. Once the cloud function is deployed, you should be able to find the HTTP endpoint of this deployed function.
        Copy and paste it somewhere locally. You will need this later.
     5. Follow above steps (1-3) for deploying the core encoding cloud function (under the folder vod-basic-encoder).
