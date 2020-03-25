@@ -29,20 +29,31 @@ This repository contains python code that will help you encode your source video
 # How to get kick-started? 
     1. You need to create a Bitmovin Infra ID. This is not to be confused with GCP account or project IDs
         ./create-bitmovin-infra.sh <name of the infra> <description> 
-    2. Key in the necessary values against each variable 
+    2. Key in the necessary values against each variable in the "config.py" file under the "manifest-generator" folder
+                GCS_INPUT_BUCKET_NAME
+                GCS_INPUT_ACCESS_KEY
+                GCS_INPUT_SECRET_KEY 
+                GCS_OUTPUT_BUCKET_NAME
+                GCS_OUTPUT_ACCESS_KEY
+                GCS_OUTPUT_SECRET_KEY
+                GCE_SERVICE_ACCOUNT_EMAIL
+                GCE_PRIVATE_KEY
+                GCE_PROJECT_ID
+                GCE_ACCOUNT_ID 
+                CLOUD_REGION
+    3. Zip all the files under this folder and upload it to Google Cloud Functions and deploy the scripts.
+       You need to choose Python 3.7 as the runtime environment
+    4. Once the cloud function is deployed, you should be able to find the HTTP endpoint of this deployed function.
+       Copy and paste it somewhere locally. You will need this later.
+    5. Follow above steps (1-3) for deploying the core encoding cloud function (under the folder vod-basic-encoder).
+       Two changes here
+            A) In the config.py file of vod-basic-encoder, you need to add the WEBHOOK_SUCCESS_URL variable
+               and set it's value to the HTTP endpoint of the manifest-generator cloud function (You've already copied this)
+            B) While creating the cloud functions, you need to choose "Create and Finalize" trigger (not HTTP endpoint)
+    6. Ensure both the functions are successfully deployed and then upload a sample input video file into the input GCS bucket
+    7. The vod-basic-encoder function will first be triggered, one standard n1.standard-8 VM and mulitple PVMs will be spun
+       up.
+    8. Once the ts and mp4 segments are successfully generated and uploaded to the GCS output bucket,
+       the manifest-generator function will be triggered. This will create the .m3u8 and .mpd files and output them to
+       the GCS output location
    
-
-GCS_INPUT_BUCKET_NAME
-GCS_INPUT_ACCESS_KEY
-GCS_INPUT_SECRET_KEY 
-GCS_OUTPUT_BUCKET_NAME
-GCS_OUTPUT_ACCESS_KEY
-GCS_OUTPUT_SECRET_KEY
-
-GCE_SERVICE_ACCOUNT_EMAIL
-GCE_PRIVATE_KEY
-GCE_PROJECT_ID
-GCE_ACCOUNT_ID 
-CLOUD_REGION
-
-WEBHOOK_SUCCESS_URL
