@@ -34,7 +34,7 @@ OUTPUT_BASE_PATH = ""
 
 #WEBHOOK DETAILS FOR TRIGGERING ANOTHER CLOUD FUNCTIONS ENDPOINT TO CREATE MANIFEST
 WEBHOOK_ERROR_URL = "http://www.bitmovin.com/"
-WEBHOOK_SUCCESS_URL = "https://us-central1-saibalaji-scratchpad.cloudfunctions.net/manifest-generator"
+WEBHOOK_SUCCESS_URL = "<HTTP ENDPOINT URL OF THE MANIFEST GENERATOR CLOUD FUNCTIONS>"
 # Override with local config settings
 try:
     from config_local import *
