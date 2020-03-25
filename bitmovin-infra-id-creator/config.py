@@ -1,0 +1,19 @@
+import os
+
+## Bitmovin API Details
+BITMOVIN_API_KEY = "be29205a-9c4c-48e5-9d12-12221f9d7c4a"
+BITMOVIN_TENANT_ORG_ID = ""
+
+## GCE Account Related Details
+GCE_SERVICE_ACCOUNT_EMAIL = "saibalaji-bitmovin@saibalaji-scratchpad.iam.gserviceaccount.com"
+GCE_PRIVATE_KEY = "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDbXxkcZ9p79QJ2\nSwxaB3o4vH4zaPKzfmUlyw1vpRGm7m2aRFV2/cy/xTn1wrtArqPLhTUzJFM/Uksa\nSTFoG2/0F4PoiLQPr1xlIUZB9IX6yUw+H4XpStel8aRaPf57Nhmzxr4AqD1Wz/D/\nsGfdv8A7nog/0ewIa3BGvoxH27MNLuDycpWFiSVtaUzZI9m5lxZPdCdGUzqscDXl\ng7V8U/VxECGO6yLeiUflXG6zW8Ix6TEj3eJbO7LX9J7DUWsfTQIpZRpcs3L/hsG6\nwZhuH6otclriFH8/wIvonRovmYVMLKp+i/JBbF9mNjzzPIwCyO28bbnkUnuQEeHz\nyncXRcf/AgMBAAECggEADdZz2QzcBVGxNBEL2Gn8VbPeKhQGqzff3YBveolpEaSc\nmUySL41W6wnf3BbKhQv/HQlsD6vM7IOeZSwUx8JjT3xkP7jP0uV26JIuwl5QTT+B\nZbHLWqnz7G3PtjmO4erJuENjHNt/8wfu5dIU2zILSDd51LzDLMzKKkw+wRGku8IJ\nXFYq1XVvnonrleyG7bfEAZhRJ/x74YT4YFdm02LBMMxP3uwSSafQkB8ibf2T7som\niLvKeE7QQxPckkvgktGh14mL1iTt3vaUlVqQef44QHopo9X/DJ86TTHFCw8r+rCQ\nYlQLMoqXXUQi4WJV1Oz9DHOei0zibpCc08fGPs3R0QKBgQDvqgAdjnrk107aFlOV\nWX1BsbTq6dgJrqz2L1m9MTfKURl+NoJNWbRgusrsb9lhNLPaMRsdSHobSoyz50QS\nLn4sG2LzogtWb+bWOee3KxfSXVUtUv5T+Qst2+erg7IR6d/zvGt93XfOH4OtYylp\nMNgk5HAVodRCa1KiCykwOKzR2wKBgQDqUwDy2TDdIrPkV401/lbn+f7497BU6GhZ\nRHuD8tSMAQgPRFlm0CBwRfVMcVVs+tmboX6TxkK7uT3UbsmrwP0dkXPC7KUjYScR\nxwDnS8frtbVCfWX/hL2bs4gWj+aE+roCASPzrEwiz1YI92pAd1rNdfu44sqn5oJa\nQ78/R18VrQKBgB3heTA2MnZTrd4dCIDHbomBSYg8bZYPdDshfjPLbiRIZkBJNYfF\nVmr0/xXpgBXRh1b95l6JScgbTF2lyOPnbg27wGOV4Yn+W657+7rnoYm130fOYC1C\nELXABCtrOQloumZeKJzBvw0w+q7kfSZDU7+Nx7e6vIcncF8JuzHq7wkfAoGAErmB\nSOasLe+Y+nU4loj1fuIOSuzYDWDo/cEoMZoU+/8VGss2ba3R+cbNXEduMSA2hWY5\nTCu6p2+dDj2wJeZtE5DM9FWeuJ4J1jTV0KXQmvhRPLfyj6GW2TtWc58aJ6Q1evWG\nXvF0wA9ba6oBtpcTDXoRHGwbD6Gu5vGk9bSJV50CgYEAkxhJ+m9bPmvDux2rtIKj\n0EyunN6nBc/BVDgzYhFOH5Rc91vKv32fVCkyozMZzxCO05cZm0DJHui7Kcy0NFZ3\nDf/pC8AmquLGG2IQkirzxrI9jf56bgXDrge5qy9u/InIb56557ldr1mcMIyJYq8/\n6mGeoUg3bqLZiueEXOY9zD4=\n-----END PRIVATE KEY-----\n"
+GCE_PROJECT_ID = "saibalaji-scratchpad"
+GCE_ACCOUNT_ID = "de5a9119-7d36-47b7-86dd-82850311e636"
+CLOUD_REGION = "GOOGLE_US_CENTRAL_1"
+
+
+# Override with local config settings
+try:
+    from config_local import *
+except ImportError:
+    print('no local settings to import')
