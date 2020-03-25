@@ -1,12 +1,16 @@
 # bitmovin-on-gcp-encode
 This repository contains python code that will help you encode your source video files across multiple preset configs
 
+# Pre-requisites
+    1. A Bitmovin account with a working API Key and Secret
+    2. A GCP account with IAM admin, Compute and Storage Admin privileges
+
 # How to use this repo?
     1. Standalone: In this case, you need to un-comment the "ASSET_NAME" variable under config.py and add the name othe input        video file you want to transcode from the GCS input bucket
     2. Watchfolder: Run it on Google Cloud Functions and integrate it as part of your video pipeline workflow. Any upload to
        the GCS input bucket will trigger the encoding functions
 
-# What do you need from Google Cloud standpoint? 
+# What do you need to set up under your GCP account? 
     1. Create a new service account with Compute Admin privlieges
     2. Set up two firewall rules for VOD encoding
           - Encoder-Service: Allow TCP port 9999 for all source IPs
@@ -21,7 +25,7 @@ This repository contains python code that will help you encode your source video
              The general thumb rule is - More the instances, faster the encoding
              This will also directly impact the GCP compute costs
              
-# What do you need from Bitmovin standpoint?  
+# What do you need to set up under Bitmovin account?  
     1. Bitmovin API Key - From the Bitmovin dashboard
     2. Bitmovin Infrastructure ID - Launch the create-bitmovin-infra.sh script
     3. Whitelisting of GCP service account for VM images - You need to provide the service account email to Bitmovin and they        will be able to whitelist the service account email ID in the back-end
