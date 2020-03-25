@@ -1,4 +1,4 @@
-# Run Bitmovin encoding jobs on Google Cloud Platform
+# Run Bitmovin transcoding jobs on Google Cloud Platform
 This repository contains python code that will help you encode your source video files across multiple preset configs
 
 # Pre-requisites
