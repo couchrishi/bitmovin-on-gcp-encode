@@ -26,10 +26,11 @@ This repository contains python code that will help you encode your source video
     2. Bitmovin Infrastructure ID - Launch the create-bitmovin-infra.sh script
     3. Whitelisting of GCP service account for VM images - You need to provide the service account email to Bitmovin and they        will be able to whitelist the service account email ID in the back-end
 
-
 # How to get kick-started? 
-1. Launch the create-bitmovin-infra.sh script
-    - 
+    1. You need to create a Bitmovin Infra ID. This is not to be confused with GCP account or project IDs
+        ./create-bitmovin-infra.sh <name of the infra> <description> 
+    2. Key in the necessary values against each variable 
+   
 
 GCS_INPUT_BUCKET_NAME
 GCS_INPUT_ACCESS_KEY
